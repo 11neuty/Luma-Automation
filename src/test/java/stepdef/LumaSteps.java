@@ -38,4 +38,24 @@ public class LumaSteps {
     public void userCanLogin() {
         lumaPage.verifyAfterLogin();
     }
-}
+
+    //onboarding
+
+    @When("User click Create an account")
+    public void userClickCreateAnAccount() {
+    }
+
+    @Then("Redirect to onboarding page")
+    public void redirectToOnboardingPage() {
+    }
+
+    @When("Fill form data firstname as {string} lastname as {string} email as {string} password as {string} confirm pass as {string}")
+    public void fillFormDataFirstnameAsLastnameAsEmailAsPasswordAsConfirmPassAsAsda(String arg0, String arg1, String arg2, String arg3) throws Throwable {    // Write code here that turns the phrase above into concrete actions    throw new cucumber.api.PendingException();}
+    }
+
+    @Then("User can see {string}")
+    public void userCanSee(String arg0) {
+    }}
+
+
+

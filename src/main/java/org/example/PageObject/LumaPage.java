@@ -30,33 +30,28 @@ public class LumaPage {
 
     }
     public void clickLoginMenu() {
-        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(5));
-        WebElement loginMenu = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul/li/a[contains(text(), 'Sign In')]")));
+        WebElement loginMenu = waitForElement(By.xpath("//div/ul/li/a[contains(text(), 'Sign In')]"));
         loginMenu.click();
     }
 
     public void fillUsername(String uname){
-        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(5));
-        WebElement fillUname = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/input[@id = 'email']")));
+        WebElement fillUname = waitForElement(By.xpath("//div/input[@id = 'email']"));
         fillUname.sendKeys(uname);
     }
 
     public void fillPassword(String pass){
-        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(5));
-        WebElement fillPass = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/input[@title = 'Password']")));
+        WebElement fillPass = waitForElement(By.xpath("//div/input[@title = 'Password']"));
         fillPass.sendKeys(pass);
     }
 
     public void clickLoginButton(){
-        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(5));
-        WebElement clickLogin = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/div/button[@type = 'submit' and @class = 'action login primary']")));
+        WebElement clickLogin = waitForElement(By.xpath("//div/div/button[@type = 'submit' and @class = 'action login primary']"));
         clickLogin.click();
     }
 
     public boolean verifyAfterLogin() {
-        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(5));
         try {
-            WebElement verifyAfterLogin = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1/span[text()='My Account']")));
+            WebElement verifyAfterLogin = waitForElement(By.xpath("//h1/span[text()='Home Page']"));
             return verifyAfterLogin.isDisplayed();
         } catch (TimeoutException e) {
             System.out.println("Element not found: " + e.getMessage());
@@ -66,6 +61,47 @@ public class LumaPage {
             return false; // Mengembalikan false untuk kesalahan lain
         }
     }
+
+    public void clickCreateAccount(){
+        WebElement clickCreateAcc = waitForElement(By.xpath(""));
+        clickCreateAcc.click();
+    }
+
+    public boolean verifyOnboardingPage(){
+        WebElement verifOnboarding = waitForElement(By.xpath("//h1/span[text() = 'Create New Customer Account']"));
+        return verifOnboarding.isDisplayed();
+    }
+
+    public void fillForm(String firstName, String lastName, String email, String pass, String confirmPass){
+        WebElement firtName = waitForElement(By.xpath("//div/input[@name = 'firstname']"));
+        firtName.sendKeys(firstName);
+
+        WebElement fillLastName = waitForElement(By.xpath("//div/input[@name = 'lastname']"));
+        fillLastName.sendKeys(lastName);
+
+        WebElement fillEmail = waitForElement(By.xpath("//div/input[@name = 'email']"));
+        fillEmail.sendKeys(email);
+
+        WebElement fillPass = waitForElement(By.xpath("//div/input[@title= 'Password']"));
+        fillPass.sendKeys(pass);
+
+        WebElement fillConfirmPass = waitForElement(By.xpath("//div/input[@title= 'Confirm Password']"));
+        fillConfirmPass.sendKeys(confirmPass);
+    }
+
+    public void clickCreateAnAccount(){
+        WebElement clickCrateAnAccount = waitForElement(By.xpath("//div/button/span[text()='Create an Account']"));
+        clickCrateAnAccount.click();
+    }
+
+    public boolean verifyCreateAccount(String expectedText){
+        WebElement verifCreteaAcc = waitForElement(By.xpath(""));
+        String actualText = verifCreteaAcc.getText();
+        return expectedText.equals(actualText);
+
+    }
+
+
 
 
 }
