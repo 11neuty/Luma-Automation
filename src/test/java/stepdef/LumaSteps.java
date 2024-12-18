@@ -43,19 +43,37 @@ public class LumaSteps {
 
     @When("User click Create an account")
     public void userClickCreateAnAccount() {
+        lumaPage.clickCreateAccount();
     }
 
     @Then("Redirect to onboarding page")
     public void redirectToOnboardingPage() {
+        lumaPage.verifyOnboardingPage();
     }
 
     @When("Fill form data firstname as {string} lastname as {string} email as {string} password as {string} confirm pass as {string}")
-    public void fillFormDataFirstnameAsLastnameAsEmailAsPasswordAsConfirmPassAsAsda(String arg0, String arg1, String arg2, String arg3) throws Throwable {    // Write code here that turns the phrase above into concrete actions    throw new cucumber.api.PendingException();}
+    public void fillFormDataFirstnameAsLastnameAsEmailAsPasswordAsConfirmPassAsAsda(String firstName, String lastName, String email, String pass, String confirmPass) throws Throwable {
+        lumaPage.fillForm(firstName, lastName, email, pass, confirmPass);
+        lumaPage.clickCreateAnAccount();
     }
 
     @Then("User can see {string}")
-    public void userCanSee(String arg0) {
-    }}
+    public void userCanSee(String ecpectedText) {
+        lumaPage.verifyCreateAccount(ecpectedText);
+    }
+
+    @Then("Error validation has appear")
+    public void errorValidationHasAppear() {
+        lumaPage.verifyErrorLogin();
+
+    }
+
+    @Then("Error email validation has appear")
+    public void errorEmailValidationHahsAppear() {
+        lumaPage.verifyEmailError();
+
+    }
+}
 
 
 

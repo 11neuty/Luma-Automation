@@ -154,7 +154,7 @@
               <goal>generate</goal>
             </goals>
             <configuration>
-              <projectName>Project Name</projectName>
+              <projectName>Magento-Automation</projectName>
               <outputDirectory>${project.build.directory}/Report/cucumber-reports</outputDirectory>
               <cucumberOutput>${project.build.directory}/cucumber/cucumber.json</cucumberOutput>
               <skippedFails>true</skippedFails>
