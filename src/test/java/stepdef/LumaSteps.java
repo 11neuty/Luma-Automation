@@ -73,6 +73,34 @@ public class LumaSteps {
         lumaPage.verifyEmailError();
 
     }
+
+
+    @When("User add to cart item")
+    public void userAddToCartItem() {
+        lumaPage.addToCartItem();
+    }
+
+    @And("User check cart")
+    public void userCheckCart() {
+        lumaPage.checkCart();
+    }
+
+    @Then("Added item shown")
+    public void addedItemShown() {
+        lumaPage.checkItem();
+    }
+
+    @When("User search item {string}")
+    public void userSearchItem() {
+    }
+
+    @And("User click search icon")
+    public void userClickSearchIcon() {
+    }
+
+    @Then("Search result has shown")
+    public void searchResultHasShown() {
+    }
 }
 
 
