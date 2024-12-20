@@ -11,6 +11,8 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import java.util.Objects;
 
 import java.time.Duration;
 import java.util.concurrent.Callable;
@@ -200,5 +202,22 @@ public class LumaPage {
 
             return cartItemName.equals(itemName);
         }) != null;
+    }
+
+    public void searchItem(String item) {
+        executeWithHandling(() -> {
+            WebElement searchItem = waitForElement(By.xpath("//div/input[@id='search']"));
+            searchItem.sendKeys(item);
+            searchItem.sendKeys(Keys.ENTER);
+            return null;
+        });
+    }
+    public boolean verifySearchItem(String item) {
+        // Mengembalikan true jika sama, false jika tidak
+        return Boolean.TRUE.equals(executeWithHandling(() -> {
+            WebElement itemOnSearch = waitForElement(By.xpath("//dl/dd[1]/a"));
+            String itemText = itemOnSearch.getText();
+            return Objects.equals(itemText, item);
+        }));
     }
 }

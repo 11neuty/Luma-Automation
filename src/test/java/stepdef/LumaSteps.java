@@ -91,15 +91,14 @@ public class LumaSteps {
     }
 
     @When("User search item {string}")
-    public void userSearchItem() {
+    public void userSearchItem(String item) {
+        lumaPage.searchItem(item);
     }
 
-    @And("User click search icon")
-    public void userClickSearchIcon() {
-    }
 
-    @Then("Search result has shown")
-    public void searchResultHasShown() {
+    @Then("Search result has shown {string}")
+    public void searchResultHasShown(String item) {
+        lumaPage.verifySearchItem(item);
     }
 }
 

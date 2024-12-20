@@ -1,5 +1,6 @@
 @test
 Feature: Onboarding
+  #ganti email terlebih dahulu
   Scenario: Create new user by valid data
     Given User open luma website
     When  User click Create an account
