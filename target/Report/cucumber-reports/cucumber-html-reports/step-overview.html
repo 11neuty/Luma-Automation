@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>Magento-Automation</td>
+                          <td>1</td>
+                        <td>20 Dec 2024, 00:18</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">hooks.Hooks.closeBrowser()</td>
+                <td>6</td>
+                <td class="duration" data-value="4155931600">4s 155ms</td>
+                <td class="duration" data-value="692655266">692ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">hooks.Hooks.openBrowser()</td>
+                <td>6</td>
+                <td class="duration" data-value="286220281000">4m 46s 220ms</td>
+                <td class="duration" data-value="47703380166">47s 703ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepdef.LumaSteps.addedItemShown()</td>
+                <td>1</td>
+                <td class="duration" data-value="1197900200">1s 197ms</td>
+                <td class="duration" data-value="1197900200">1s 197ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepdef.LumaSteps.errorEmailValidationHahsAppear()</td>
+                <td>1</td>
+                <td class="duration" data-value="44852800">044ms</td>
+                <td class="duration" data-value="44852800">044ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepdef.LumaSteps.errorValidationHasAppear()</td>
+                <td>2</td>
+                <td class="duration" data-value="120104461900">2m 104ms</td>
+                <td class="duration" data-value="60052230950">1m 052ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepdef.LumaSteps.fillFormDataFirstnameAsLastnameAsEmailAsPasswordAsConfirmPassAsAsda(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="34789104500">34s 789ms</td>
+                <td class="duration" data-value="34789104500">34s 789ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepdef.LumaSteps.redirectToOnboardingPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="27045300">027ms</td>
+                <td class="duration" data-value="27045300">027ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepdef.LumaSteps.userAddToCartItem()</td>
+                <td>1</td>
+                <td class="duration" data-value="37490614200">37s 490ms</td>
+                <td class="duration" data-value="37490614200">37s 490ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepdef.LumaSteps.userCanLogin()</td>
+                <td>1</td>
+                <td class="duration" data-value="30262100">030ms</td>
+                <td class="duration" data-value="30262100">030ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepdef.LumaSteps.userCanSee(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="61069900">061ms</td>
+                <td class="duration" data-value="61069900">061ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepdef.LumaSteps.userCheckCart()</td>
+                <td>1</td>
+                <td class="duration" data-value="85957400">085ms</td>
+                <td class="duration" data-value="85957400">085ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepdef.LumaSteps.userClickCreateAnAccount()</td>
+                <td>1</td>
+                <td class="duration" data-value="6304981400">6s 304ms</td>
+                <td class="duration" data-value="6304981400">6s 304ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepdef.LumaSteps.userClickLoginButton()</td>
+                <td>4</td>
+                <td class="duration" data-value="188715703900">3m 8s 715ms</td>
+                <td class="duration" data-value="47178925975">47s 178ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepdef.LumaSteps.userClickLoginMenu()</td>
+                <td>4</td>
+                <td class="duration" data-value="36348807800">36s 348ms</td>
+                <td class="duration" data-value="9087201950">9s 087ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepdef.LumaSteps.userFillUsernameAsAndPasswordAs(java.lang.String,java.lang.String)</td>
+                <td>4</td>
+                <td class="duration" data-value="857764500">857ms</td>
+                <td class="duration" data-value="214441125">214ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">stepdef.LumaSteps.userVerifyStartPage()</td>
+                <td>6</td>
+                <td class="duration" data-value="316453700">316ms</td>
+                <td class="duration" data-value="52742283">052ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>16</td>
+              <td>41</td>
+              <td class="duration">11m 56s 751ms</td>
+              <td class="duration">17s 481ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
