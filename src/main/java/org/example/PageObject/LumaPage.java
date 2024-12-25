@@ -220,4 +220,26 @@ public class LumaPage {
             return Objects.equals(itemText, item);
         }));
     }
+
+    public void chooseItem(){
+        executeWithHandling(() ->{
+            JavascriptExecutor js = (JavascriptExecutor) webDriver;
+            js.executeScript("window.scrollBy(0, 500);");
+
+            WebElement addSize = waitForElement(By.xpath("//div[@class='swatch-opt-1556']//div[.='S']"));
+            addSize.click();
+
+            WebElement addColor = waitForElement(By.xpath("//div[@class='swatch-opt-1556']/div[@class='swatch-attribute color']//div[2]"));
+            addColor.click();
+            return null;
+        });
+    }
+
+    public void addToWishlist(){
+        executeWithHandling(() -> {
+            WebElement addWishlist = waitForElement(By.xpath(""));
+            addWishlist.click();
+            return null;
+        });
+    }
 }

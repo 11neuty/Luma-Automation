@@ -100,6 +100,18 @@ public class LumaSteps {
     public void searchResultHasShown(String item) {
         lumaPage.verifySearchItem(item);
     }
+
+    @When("User choose item")
+    public void userChooseItem() {
+    }
+
+    @And("User click add to wishlist")
+    public void userClickAddToWishlist() {
+    }
+
+    @Then("Item shown on my wishlist")
+    public void itemShownOnMyWishlist() {
+    }
 }
 
 
