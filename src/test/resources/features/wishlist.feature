@@ -1,4 +1,4 @@
-@test
+@wish
 Feature: Add item to wishlist
   Scenario: Add item to wishlist while not login
     Given User open luma website
