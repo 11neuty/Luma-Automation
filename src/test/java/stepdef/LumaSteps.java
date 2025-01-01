@@ -103,14 +103,20 @@ public class LumaSteps {
 
     @When("User choose item")
     public void userChooseItem() {
+        lumaPage.chooseItem();
+
     }
 
     @And("User click add to wishlist")
     public void userClickAddToWishlist() {
+        lumaPage.addToWishlist();
+
     }
 
     @Then("Item shown on my wishlist")
     public void itemShownOnMyWishlist() {
+        lumaPage.wishlistShown();
+
     }
 }
 

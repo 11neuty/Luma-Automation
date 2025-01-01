@@ -237,9 +237,16 @@ public class LumaPage {
 
     public void addToWishlist(){
         executeWithHandling(() -> {
-            WebElement addWishlist = waitForElement(By.xpath(""));
+            WebElement addWishlist = waitForElement(By.xpath("//div[contains(@class, 'swatch-opt')]/following-sibling::div[contains(@class, 'product-item-inner')]//a[contains(@data-post, '\"product\":1556')]"));
             addWishlist.click();
             return null;
+        });
+    }
+
+    public boolean wishlistShown() {
+        return executeWithHandling(() -> {
+            WebElement wishlist = waitForElement(By.xpath("//div/div[@class = 'message-success success message']")); // Ganti dengan XPath yang sesuai
+            return wishlist.isDisplayed();
         });
     }
 }
