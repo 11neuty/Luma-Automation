@@ -249,4 +249,31 @@ public class LumaPage {
             return wishlist.isDisplayed();
         });
     }
+
+    public void clickMyWishlist(){
+        executeWithHandling(() -> {
+            WebElement clickMyWishlist = waitForElement(By.xpath("//li[@class = 'customer-welcome active']/div/ul/li[@class = 'link wishlist']"));
+            clickMyWishlist.click();
+            return null;
+        });
+    }
+
+    public void clickRemoveWishlist(){
+        executeWithHandling(() -> {
+            JavascriptExecutor js = (JavascriptExecutor) webDriver;
+            js.executeScript("window.scrollBy(0, 300);");
+
+            WebElement clickRemoveWishlist = waitForElement(By.xpath("//li[@id = 'item_13566']/div/div[@class = 'product-item-inner']/div/a[@class = 'btn-remove action delete']"));
+            clickRemoveWishlist.click();
+            return null;
+        });
+    }
+
+    public void clickWelcome(){
+        executeWithHandling(() ->{
+            WebElement clickWelcome = waitForElement(By.xpath("//div[@class = 'panel header']/ul/li/span[@class = 'logged-in']"));
+            clickWelcome.click();
+            return null;
+        });
+    }
 }

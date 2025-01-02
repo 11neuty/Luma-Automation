@@ -116,8 +116,24 @@ public class LumaSteps {
     @Then("Item shown on my wishlist")
     public void itemShownOnMyWishlist() {
         lumaPage.wishlistShown();
-
     }
+    @When("User click menu account")
+    public void userClickMenuAccount() {
+        lumaPage.clickWelcome();
+    }
+
+
+    @And("User click my wishlist")
+    public void userClickMyWishlist() {
+        lumaPage.clickMyWishlist();
+    }
+
+    @And("User delete wishlist item")
+    public void userDeleteWishlistItem() {
+        lumaPage.clickRemoveWishlist();
+    }
+
+
 }
 
 

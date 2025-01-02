@@ -1,5 +1,5 @@
-@test
-Feature: Add To Cart while not login
+@wish
+Feature: cart
   Scenario: Add to cart item while not login
     Given User open luma website
     When  User add to cart item
@@ -20,4 +20,3 @@ Feature: Add To Cart while not login
     When  User add to cart item
     And   User check cart
     Then  Added item shown
-

@@ -1,5 +1,5 @@
-@wish
-Feature: Add item to wishlist
+@test
+Feature: wishlist
   Scenario: Add item to wishlist while not login
     Given User open luma website
     When  User click login menu
@@ -9,3 +9,4 @@ Feature: Add item to wishlist
     When  User choose item
     And   User click add to wishlist
     Then  Item shown on my wishlist
+
