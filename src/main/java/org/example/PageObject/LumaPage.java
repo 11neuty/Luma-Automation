@@ -263,7 +263,7 @@ public class LumaPage {
             JavascriptExecutor js = (JavascriptExecutor) webDriver;
             js.executeScript("window.scrollBy(0, 300);");
 
-            WebElement clickRemoveWishlist = waitForElement(By.xpath("//li[@id = 'item_13566']/div/div[@class = 'product-item-inner']/div/a[@class = 'btn-remove action delete']"));
+            WebElement clickRemoveWishlist = waitForElement(By.xpath("//a[contains(.,'Remove item')]"));
             clickRemoveWishlist.click();
             return null;
         });
@@ -271,7 +271,7 @@ public class LumaPage {
 
     public void clickWelcome(){
         executeWithHandling(() ->{
-            WebElement clickWelcome = waitForElement(By.xpath("//div[@class = 'panel header']/ul/li/span[@class = 'logged-in']"));
+            WebElement clickWelcome = waitForElement(By.xpath("//div[@class='panel header']//button[@class='action switch']"));
             clickWelcome.click();
             return null;
         });

@@ -1,4 +1,4 @@
-@wish
+@test
 Feature: cart
   Scenario: Add to cart item while not login
     Given User open luma website
