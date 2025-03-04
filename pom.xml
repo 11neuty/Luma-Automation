@@ -53,12 +53,6 @@
       <version>5.7.5</version>
     </dependency>
 
-<!--    &lt;!&ndash; SLF4J Implementation &ndash;&gt;-->
-<!--    <dependency>-->
-<!--      <groupId>org.slf4j</groupId>-->
-<!--      <artifactId>slf4j-simple</artifactId>-->
-<!--      <version>1.7.32</version>-->
-<!--    </dependency>-->
 
     <dependency>
       <groupId>org.slf4j</groupId>

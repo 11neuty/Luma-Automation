@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         },
         features = {"classpath:features/"},
         plugin = {"pretty", "html:target/site/cucumber-pretty", "json:target/cucumber/cucumber.json"},
-        tags = "@edit"
+        tags = "@test"
 )
 
 public class RunCukesTest {
