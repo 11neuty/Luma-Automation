@@ -44,10 +44,15 @@ To get a local copy up and running, follow these steps:
 
 ### Usage 🛠️
 To add items to your cart, navigate to the product page and click the "Add to Cart" button. 🛒
-Edit your cart items by accessing the cart and making necessary adjustments. 🔄
-Log in to your account to utilize personalized features. 👤
-New users can create an account by following the registration prompts. 🆕
-Add products to your wishlist for easy access later. ⭐
+
+- Edit your cart items by accessing the cart and making necessary adjustments. 🔄
+
+- Log in to your account to utilize personalized features. 👤
+
+- New users can create an account by following the registration prompts. 🆕
+
+- Add products to your wishlist for easy access later. ⭐
+
 Contributing 🤝
 Contributions are welcome! Feel free to submit a pull request or open an issue for suggestions or improvements.
 
