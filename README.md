@@ -43,7 +43,7 @@ To get a local copy up and running, follow these steps:
    mvn install
 
 ### Usage 🛠️
-To add items to your cart, navigate to the product page and click the "Add to Cart" button. 🛒
+- To add items to your cart, navigate to the product page and click the "Add to Cart" button. 🛒
 
 - Edit your cart items by accessing the cart and making necessary adjustments. 🔄
 
