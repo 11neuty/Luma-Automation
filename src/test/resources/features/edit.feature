@@ -1,4 +1,4 @@
-@edit
+@test
   Feature: edit
     Scenario: Delete wishlist item by login item
       Given User click login menu
