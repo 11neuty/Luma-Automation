@@ -53,7 +53,11 @@ To get a local copy up and running, follow these steps:
 
 - Add products to your wishlist for easy access later. ⭐
 
-Contributing 🤝
+### 📋 Test Case Documentation
+Semua skenario pengujian telah disiapkan dalam bentuk spreadsheet untuk memastikan cakupan fungsionalitas secara menyeluruh. Anda dapat melihat daftar lengkap test case berikut:
+📄 [Test Case Spreadsheet](https://docs.google.com/spreadsheets/d/12By6oYgulTBeWuoNGNVJn7_fHJwCDOUbfpF2YmF2fco/edit?usp=sharing)
+
+### Contributing 🤝
 Contributions are welcome! Feel free to submit a pull request or open an issue for suggestions or improvements.
 
 ### License 📄
